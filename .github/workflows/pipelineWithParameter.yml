@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Set Test Class Name
-        run: echo "The value of input parameter is --> ${{ inputs.testClassName }}"
+        run: echo "The value of input parameter is --> ${{ inputs.SimpleTestWithStatuses }}"
 
 
       - name: Checkout repository
@@ -26,4 +26,4 @@ jobs:
           distribution: 'adopt'
 
       - name: Run tests
-        run: mvn test -Dtest=${{ inputs.testClassName }}
+        run: mvn test -Dtest=${{ inputs.SimpleTestWithStatuses }}
